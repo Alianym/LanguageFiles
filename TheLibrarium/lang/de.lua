@@ -3,9 +3,8 @@ local stringsDE = {
    LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Bücherregal",
 }
 
-for id, string in pairs(stringsDE) do
-   ZO_CreateStringId(id, string)
-   SafeAddVersion(id, 2)
+for id, stringVar in pairs(stringsDE) do
+   SafeAddString(_G[id], stringVar, 2)
 end
 
 LibrMailDateMap.Month = {
