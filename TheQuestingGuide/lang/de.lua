@@ -3,22 +3,21 @@ local stringsDE = {
 	TQG_MENU_JOURNAL = "Der Quest-Leitfaden",
 	TQG_OVERVIEW_OBJECTIVE_TEXT = "Notizen",
 	TQG_DEFAULT_QUEST_COMPLETE = "Abgeschlossen",
-	TQG_DEFAULT_QUEST_INCOMPLETE = "Unvollst‰ndig",
+	TQG_DEFAULT_QUEST_INCOMPLETE = "Unvollst√§ndig",
 	TQG_PROLOGUE = "Prolog",
 	TQG_EPILOGUE = "Epilog",
 
-	--TQG_CONFIRM_QUEST_ZONE_STORY = "Gebietserz‰hlungy",
+	--TQG_CONFIRM_QUEST_ZONE_STORY = "Gebietserz√§hlungy",
 	--TQG_CONFIRM_QUEST_POI = "Interessante Orte",
 }
 
-for id, string in pairs(stringsDE) do
-   ZO_CreateStringId(id, string)
-   SafeAddVersion(id, 2)
+for id, stringVar in pairs(stringsFR) do
+   SafeAddString(_G[id], stringVar, 2)
 end
 
 if not TQG then TQG = {} end
 
-TQG.OverviewTabName = "‹bersicht"
+TQG.OverviewTabName = "√úbersicht"
 TQG.ClassicTabName = "Klassisch"
 TQG.DLCTabName = "DLC"
 TQG.GroupTabName = "Gruppe"
