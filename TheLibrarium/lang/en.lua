@@ -49,8 +49,8 @@ local stringsEN = {
 	LIBRARIUM_COD_COST = GetString(SI_MAIL_READ_COD_LABEL),
 }
 
-for id, string in pairs(stringsEN) do
-   ZO_CreateStringId(id, string)
+for id, stringVar in pairs(stringsEN) do
+   ZO_CreateStringId(id, stringVar)
    SafeAddVersion(id, 1)
 end
 
