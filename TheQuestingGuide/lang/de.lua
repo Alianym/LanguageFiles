@@ -7,7 +7,7 @@ local stringsDE = {
 	TQG_PROLOGUE = "Prolog",
 	TQG_EPILOGUE = "Epilog",
 
-	--TQG_CONFIRM_QUEST_ZONE_STORY = "Gebietserzählungy",
+	--TQG_CONFIRM_QUEST_ZONE_STORY = "Gebietserzählung",
 	--TQG_CONFIRM_QUEST_POI = "Interessante Orte",
 }
 
@@ -24,5 +24,5 @@ TQG.GroupTabName = "Gruppe"
 
 TQG.BtnQuestMap = "Klassisch: Quest Karte"
 TQG.BtnCraglorn = "Klassisch: Kargstein"
-TQG.BtnImperialCity = "DLC: The Sublime Plot"
+TQG.BtnImperialCity = "DLC: Der Hohe Beschützer"
 TQG.BtnOrsinium = "DLC: Reforging Orsinium"
