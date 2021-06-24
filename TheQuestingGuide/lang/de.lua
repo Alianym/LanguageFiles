@@ -11,7 +11,7 @@ local stringsDE = {
 	--TQG_CONFIRM_QUEST_POI = "Interessante Orte",
 }
 
-for id, stringVar in pairs(stringsFR) do
+for id, stringVar in pairs(stringsDE) do
    SafeAddString(_G[id], stringVar, 2)
 end
 
