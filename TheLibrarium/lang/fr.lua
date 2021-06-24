@@ -1,5 +1,4 @@
 local stringsFR = {
-   LIBRARIUM_MAIL_ATTACHED = "Jointe",
    LIBRARIUM_MAIL_SAVE = "Sauvegarder le courrier",
    LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Étagère",
 }

@@ -1,5 +1,4 @@
 local stringsRU = {
-   LIBRARIUM_MAIL_ATTACHED = "Вложение",
    LIBRARIUM_MAIL_SAVE = "Сохранить почту",
    LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Книжная полка",
 }
