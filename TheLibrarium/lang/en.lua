@@ -1,7 +1,7 @@
 --[[...Code]]--
 
-local worldIconDown = "EsoUI/Art/Progression/progression_indexIcon_world_down.dds"
 local addOnLongName = "The Librarium"
+local worldIconDown = "EsoUI/Art/Progression/progression_indexIcon_world_down.dds"
 
 local stringsEN = {
 	SI_BINDING_NAME_LIBRARIUM_OPEN_KEY = "Open the Librarium",
@@ -35,10 +35,34 @@ local stringsEN = {
 	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_MAIL_SAVED = "Mail Saved",
 	LIBRARIUM_EDITOR_ANNOUNCE_SAVED_MAIL_REMOVED = "Saved Mail Removed",
 
+	--Mail Date Strings
+	LIBRARIUM_DATE_SUNDAY = "Sundas",
+	LIBRARIUM_DATE_MONDAY = "Morndas",
+	LIBRARIUM_DATE_TUESDAY = "Tirdas",
+	LIBRARIUM_DATE_WEDNESDAY = "Middas",
+	LIBRARIUM_DATE_THURSDAY = "Turdas",
+	LIBRARIUM_DATE_FRIDAY = "Fredas",
+	LIBRARIUM_DATE_LOREDAS = "Loredas",
+
+	LIBRARIUM_MONTH_ONE = "Morning Star",
+	LIBRARIUM_MONTH_TWO = "Sun's Dawn",
+	LIBRARIUM_MONTH_THREE = "First Seed",
+	LIBRARIUM_MONTH_FOUR = "Rain's Hand",
+	LIBRARIUM_MONTH_FIVE = "Second Seed",
+	LIBRARIUM_MONTH_SIX = "Midyear",
+	LIBRARIUM_MONTH_SEVEN = "Sun's Height",
+	LIBRARIUM_MONTH_EIGHT = "Last Seed",
+	LIBRARIUM_MONTH_NINE = "Hearthfire",
+	LIBRARIUM_MONTH_TEN = "Frostfall",
+	LIBRARIUM_MONTH_ELEVEN = "Sun's Dusk",
+	LIBRARIUM_MONTH_TWELVE = "Evening Star",
+
+	LIBRARIUM_DATE_SECOND_ERA = "2E",
+
 	----
 	--ZOS-Based Strings
 	----
-	LIBRARIUM_ADVENTURES_CLOSE_BOOK = zo_strformat("<<Z:1>>", GetString(SI_DIALOG_CLOSE))
+	LIBRARIUM_ADVENTURES_CLOSE_BOOK = zo_strformat("<<Z:1>>", GetString(SI_DIALOG_CLOSE)),
 
 	LIBRARIUM_EDITOR_SEND_CUSTOM_BOOK = GetString(SI_SOCIAL_MENU_SEND_MAIL),
 	LIBRARIUM_EDITOR_SEND_MAIL_NAME = GetString(SI_SOCIAL_MENU_SEND_MAIL).."?",
@@ -53,39 +77,5 @@ for id, stringVar in pairs(stringsEN) do
    ZO_CreateStringId(id, stringVar)
    SafeAddVersion(id, 1)
 end
-
-LibrMailDateMap = 
-{
-	WeekDay = {
-		[1] = "Sundas",
-		[2] = "Morndas",
-		[3] = "Tirdas",
-		[4] = "Middas",
-		[5] = "Turdas",
-		[6] = "Fredas",
-		[7] = "Loredas",
-	},
-
-	Month = {
-		[01] = "Morning Star",
-		[02] = "Sun's Dawn",
-		[3] = "First Seed",
-		[4] = "Rain's Hand",
-		[5] = "Second Seed",
-		[6] = "Midyear",
-		[7] = "Sun's Height",
-		[8] = "Last Seed",
-		[9] = "Hearthfire",
-		[10] = "Frostfall",
-		[11] = "Sun's Dusk",
-		[12] = "Evening Star",
-	},
-
-	Year = {
-		Era = "2E",
-		YearBase = 2014,
-		TamrielYearBase = 582,
-	},
-}
 
 --[[Code...]]--

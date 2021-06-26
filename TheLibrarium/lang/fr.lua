@@ -1,23 +1,23 @@
 local stringsFR = {
-   LIBRARIUM_MAIL_SAVE = "Sauvegarder le courrier",
-   LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Étagère",
+	LIBRARIUM_MAIL_SAVE = "Sauvegarder le courrier",
+	LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Étagère",
+
+	--Mail Date Strings
+	LIBRARIUM_MONTH_ONE = "Primétoile",
+	LIBRARIUM_MONTH_TWO = "Clairciel",
+	LIBRARIUM_MONTH_THREE = "Semailles",
+	LIBRARIUM_MONTH_FOUR = "Ondepluie",
+	LIBRARIUM_MONTH_FIVE = "Plantaisons",
+	LIBRARIUM_MONTH_SIX = "Mi-l'an",
+	LIBRARIUM_MONTH_SEVEN = "Hautzénith",
+	LIBRARIUM_MONTH_EIGHT = "Vifazur",
+	LIBRARIUM_MONTH_NINE = "Âtrefeu",
+	LIBRARIUM_MONTH_TEN = "Soufflegivre",
+	LIBRARIUM_MONTH_ELEVEN = "Sombreciel",
+	LIBRARIUM_MONTH_TWELVE = "Soirétoile",
 }
 
-for id, stringVar in pairs(stringsFR) do
-   SafeAddString(_G[id], stringVar, 2)
+for id, string in pairs(stringsFR) do
+   ZO_CreateStringId(id, string)
+   SafeAddVersion(id, 2)
 end
-
-LibrMailDateMap.Month = {
-	[01] = "Primétoile",
-	[02] = "Clairciel",
-	[3] = "Semailles",
-	[4] = "Ondepluie",
-	[5] = "Plantaisons",
-	[6] = "Mi-l'an",
-	[7] = "Hautzénith",
-	[8] = "Vifazur",
-	[9] = "Âtrefeu",
-	[10] = "Soufflegivre",
-	[11] = "Sombreciel",
-	[12] = "Soirétoile",
-}

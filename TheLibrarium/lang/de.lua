@@ -26,26 +26,25 @@ local stringsDE = {
 	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_SAVED = "Buch gespeichert",
 
 	LIBRARIUM_MAIL_SAVE = "Nachrichten speichern",
-	LIBRARIUM_EDITOR_MAIL_SUBJECT_PREFIX = "LIBR",
+	--LIBRARIUM_EDITOR_MAIL_SUBJECT_PREFIX = "LIBR",
 	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_MAIL_SAVED = "Mail gesichert",
-	LIBRARIUM_EDITOR_ANNOUNCE_SAVED_MAIL_REMOVED = "Gesicherte Mail entfernt",	
+	LIBRARIUM_EDITOR_ANNOUNCE_SAVED_MAIL_REMOVED = "Gesicherte Mail entfernt",
+
+	--Mail Date Strings
+	LIBRARIUM_MONTH_ONE = "Morgenstern",
+	LIBRARIUM_MONTH_TWO = "Sonnenaufgang",
+	LIBRARIUM_MONTH_THREE = "Erstsaat",
+	LIBRARIUM_MONTH_FOUR = "RegenHand",
+	LIBRARIUM_MONTH_FIVE = "Zweitsaat",
+	LIBRARIUM_MONTH_SIX = "Mittjahr",
+	LIBRARIUM_MONTH_SEVEN = "Sonnenhöhe",
+	LIBRARIUM_MONTH_EIGHT = "Letzte Saat",
+	LIBRARIUM_MONTH_NINE = "Herdfeuer",
+	LIBRARIUM_MONTH_TEN = "Eisherbst",
+	LIBRARIUM_MONTH_ELEVEN = "Sonnenuntergang",
+	LIBRARIUM_MONTH_TWELVE = "Abendstern",
 }
 
 for id, stringVar in pairs(stringsDE) do
    SafeAddString(_G[id], stringVar, 2)
 end
-
-LibrMailDateMap.Month = {
-	[01] = "Morgenstern",
-	[02] = "Sonnenaufgang",
-	[3] = "Erstsaat",
-	[4] = "RegenHand",
-	[5] = "Zweitsaat",
-	[6] = "Mittjahr",
-	[7] = "Sonnenhöhe",
-	[8] = "Letzte Saat",
-	[9] = "Herdfeuer",
-	[10] = "Eisherbst",
-	[11] = "Sonnenuntergang",
-	[12] = "Abendstern",
-}
