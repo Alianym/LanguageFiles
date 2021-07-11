@@ -18,6 +18,5 @@ local stringsFR = {
 }
 
 for id, string in pairs(stringsFR) do
-   ZO_CreateStringId(id, string)
-   SafeAddVersion(id, 2)
+	SafeAddString(_G[id], stringVar, 2)
 end

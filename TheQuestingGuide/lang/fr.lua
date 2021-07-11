@@ -75,8 +75,7 @@ local stringsFR = {
 }
 
 for id, string in pairs(stringsFR) do
-   ZO_CreateStringId(id, string)
-   SafeAddVersion(id, 2)
+   SafeAddString(_G[id], stringVar, 2)
 end
 
 local DLCTooltipFmt = "<<1>>, <<2>>: <<3>>\n(<<4>> <<5>>)"
