@@ -1,8 +1,43 @@
 local stringsFR = {
-	LIBRARIUM_MAIL_SAVE = "Sauvegarder le courrier",
+	----
+	--General Strings
+	----
+	--SI_BINDING_NAME_LIBRARIUM_OPEN_KEY = "Open the Librarium",
+	--SI_BINDING_NAME_LIBRARIUM_OPEN_COMPENDIUM_KEY = "Open the Librarium", --Compatability
+	--SI_BINDING_NAME_LIBRARIUM_OPEN_GAMEPAD_KEY = "Open the Librarium – Gamepad",
+
 	LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Étagère",
 
+	--LIBRARIUM_LORE_LIBRARY_ANNOUNCE_BOOK_LEARNED = "Librarium Lorebook Learned",
+
+	--LIBRARIUM_ADVENTURES_RESTART_BOOK = "<START AGAIN>",
+
+	--LIBRARIUM_EDITOR_TOGGLE_MEDIUM = "Cycle Book Medium",
+	--LIBRARIUM_EDITOR_OPEN_BOOK_WRITER = "Open Book Writer",
+	--LIBRARIUM_EDITOR_OPEN_BOOK_EDITOR = "Edit Book",
+	--LIBRARIUM_EDITOR_DEFAULT_TITLE = "Enter Title",
+	--LIBRARIUM_EDITOR_DEFAULT_TEXT = "Start Writing",
+	--LIBRARIUM_EDITOR_UNDO_RECENT_CHANGES = "Undo",
+
+	--LIBRARIUM_EDITOR_SAVE_OR_OVERWRITE_NAME = "Save or Overwrite?",
+	--LIBRARIUM_EDITOR_OVERWRITE_CUSTOM_BOOK = "Overwrite Book",
+	--LIBRARIUM_EDITOR_SAVE_CUSTOM_BOOK = "Save Book",
+	--LIBRARIUM_EDITOR_DELETE_CUSTOM_BOOK = "Delete Book",
+	--LIBRARIUM_EDITOR_DELETE_NAME = "Confirm Deletion?",
+
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_OVERWRITTEN = "Book Overwritten",
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_REMOVED = "Book Removed",
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_SAVED = "Book Saved",
+
+	LIBRARIUM_MAIL_SAVE = "Sauvegarder le courrier",
+	--LIBRARIUM_DUPLICATE_MAIL_SAVE = "Duplicate Mail Save",
+	LIBRARIUM_HIRELING_MAIL_KEYWORD = "Matériaux ",
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_MAIL_SAVED = "Mail Saved",
+	--LIBRARIUM_EDITOR_ANNOUNCE_SAVED_MAIL_REMOVED = "Saved Mail Removed",
+
+	----
 	--Mail Date Strings
+	----
 	LIBRARIUM_MONTH_ONE = "Primétoile",
 	LIBRARIUM_MONTH_TWO = "Clairciel",
 	LIBRARIUM_MONTH_THREE = "Semailles",
@@ -17,6 +52,6 @@ local stringsFR = {
 	LIBRARIUM_MONTH_TWELVE = "Soirétoile",
 }
 
-for id, string in pairs(stringsFR) do
-	SafeAddString(_G[id], stringVar, 2)
+for id, stringVar in pairs(stringsFR) do
+   SafeAddString(_G[id], stringVar, 2)
 end

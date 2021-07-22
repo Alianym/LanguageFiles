@@ -1,18 +1,22 @@
 local stringsDE = {
-   	SI_BINDING_NAME_LIBRARIUM_OPEN_KEY = "Öffne Librarium",
+	----
+	--General Strings
+	----
+	SI_BINDING_NAME_LIBRARIUM_OPEN_KEY = "Öffne Librarium",
+	SI_BINDING_NAME_LIBRARIUM_OPEN_COMPENDIUM_KEY = "Öffne Librarium", --Compatability
+	SI_BINDING_NAME_LIBRARIUM_OPEN_GAMEPAD_KEY = "Open the Librarium – Gamepad",
 
-	--LIBRARIUM_CUSTOM_INTERACT_ACTION = "Librarium",
-   	LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Bücherregal",
+	LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Bücherregal",
 
 	LIBRARIUM_LORE_LIBRARY_ANNOUNCE_BOOK_LEARNED = "Librarium Lorebook gelernt",
-	--LIBRARIUM_MENU_JOURNAL = string.format("|t52:52:%s|t%s:", worldIconDown, addOnLongName),
-	--LIBRARIUM_WINDOW_TITLE_LORE_LIBRARY = string.format("|t52:52:%s|t%s:", worldIconDown, addOnLongName),
 
 	LIBRARIUM_ADVENTURES_RESTART_BOOK = "<NEUSTARTEN>",
 
 	LIBRARIUM_EDITOR_TOGGLE_MEDIUM = "Wechsel Buch Medium",
 	LIBRARIUM_EDITOR_OPEN_BOOK_WRITER = "Öffne Buch Editor",
 	LIBRARIUM_EDITOR_OPEN_BOOK_EDITOR = "Editiere Buch",
+	--LIBRARIUM_EDITOR_DEFAULT_TITLE = "Enter Title",
+	--LIBRARIUM_EDITOR_DEFAULT_TEXT = "Start Writing",
 	LIBRARIUM_EDITOR_UNDO_RECENT_CHANGES = "Undo",
 
 	LIBRARIUM_EDITOR_SAVE_OR_OVERWRITE_NAME = "Sichern oder überschreiben?",
@@ -26,11 +30,14 @@ local stringsDE = {
 	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_SAVED = "Buch gespeichert",
 
 	LIBRARIUM_MAIL_SAVE = "Nachrichten speichern",
-	--LIBRARIUM_EDITOR_MAIL_SUBJECT_PREFIX = "LIBR",
+	--LIBRARIUM_DUPLICATE_MAIL_SAVE = "Duplicate Mail Save",
+	LIBRARIUM_HIRELING_MAIL_KEYWORD = "material",
 	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_MAIL_SAVED = "Mail gesichert",
 	LIBRARIUM_EDITOR_ANNOUNCE_SAVED_MAIL_REMOVED = "Gesicherte Mail entfernt",
 
+	----
 	--Mail Date Strings
+	----
 	LIBRARIUM_MONTH_ONE = "Morgenstern",
 	LIBRARIUM_MONTH_TWO = "Sonnenaufgang",
 	LIBRARIUM_MONTH_THREE = "Erstsaat",
