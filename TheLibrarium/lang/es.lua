@@ -1,41 +1,41 @@
-local stringsDE = {
+local stringsES = {
 	----
 	--General Strings
 	----
-	SI_BINDING_NAME_LIBRARIUM_OPEN_KEY = "Öffne Librarium",
-	SI_BINDING_NAME_LIBRARIUM_OPEN_COMPENDIUM_KEY = "Öffne Librarium", --Compatability
-	SI_BINDING_NAME_LIBRARIUM_OPEN_GAMEPAD_KEY = "Öffne Librarium – Gamepad",
+	--SI_BINDING_NAME_LIBRARIUM_OPEN_KEY = "Open the Librarium",
+	--SI_BINDING_NAME_LIBRARIUM_OPEN_COMPENDIUM_KEY = "Open the Librarium", --Compatability
+	--SI_BINDING_NAME_LIBRARIUM_OPEN_GAMEPAD_KEY = "Open the Librarium – Gamepad",
 
-	LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Bücherregal",
+	LIBRARIUM_CUSTOM_INTERACT_BOOKSHELF = "Estante de libros",
 
-	LIBRARIUM_LORE_LIBRARY_ANNOUNCE_BOOK_LEARNED = "Librarium Lorebook gelernt",
+	--LIBRARIUM_LORE_LIBRARY_ANNOUNCE_BOOK_LEARNED = "Librarium Lorebook Learned",
 
-	LIBRARIUM_ADVENTURES_RESTART_BOOK = "<NEUSTARTEN>",
+	--LIBRARIUM_ADVENTURES_RESTART_BOOK = "<START AGAIN>",
 
 	--LIBRARIUM_MAIL_SEND_ANNOUNCE_ERROR = "Librarium Book Failed to Send, Try Again Later",
 
-	LIBRARIUM_EDITOR_TOGGLE_MEDIUM = "Wechsel Buch Medium",
-	LIBRARIUM_EDITOR_OPEN_BOOK_WRITER = "Öffne Buch Editor",
-	LIBRARIUM_EDITOR_OPEN_BOOK_EDITOR = "Editiere Buch",
+	--LIBRARIUM_EDITOR_TOGGLE_MEDIUM = "Cycle Book Medium",
+	--LIBRARIUM_EDITOR_OPEN_BOOK_WRITER = "Open Book Writer",
+	--LIBRARIUM_EDITOR_OPEN_BOOK_EDITOR = "Edit Book",
 	--LIBRARIUM_EDITOR_DEFAULT_TITLE = "Enter Title",
 	--LIBRARIUM_EDITOR_DEFAULT_TEXT = "Start Writing",
 
-	LIBRARIUM_EDITOR_SAVE_OR_OVERWRITE_NAME = "Sichern oder überschreiben?",
-	LIBRARIUM_EDITOR_OVERWRITE_CUSTOM_BOOK = "Überschreibe Buch",
-	LIBRARIUM_EDITOR_SAVE_CUSTOM_BOOK = "Sichere Buch",
-	LIBRARIUM_EDITOR_DELETE_CUSTOM_BOOK = "Lösche Buch",
-	LIBRARIUM_EDITOR_DELETE_NAME = "Bestätige Löschen?",
+	--LIBRARIUM_EDITOR_SAVE_OR_OVERWRITE_NAME = "Save or Overwrite?",
+	--LIBRARIUM_EDITOR_OVERWRITE_CUSTOM_BOOK = "Overwrite Book",
+	--LIBRARIUM_EDITOR_SAVE_CUSTOM_BOOK = "Save Book",
+	--LIBRARIUM_EDITOR_DELETE_CUSTOM_BOOK = "Delete Book",
+	--LIBRARIUM_EDITOR_DELETE_NAME = "Confirm Deletion?",
 
-	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_OVERWRITTEN = "Buch überschrieben",
-	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_REMOVED = "Buch entfernt",
-	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_SAVED = "Buch gespeichert",
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_OVERWRITTEN = "Book Overwritten",
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_REMOVED = "Book Removed",
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_BOOK_SAVED = "Book Saved",
 
-	LIBRARIUM_MAIL_SAVE = "Nachrichten speichern",
+	--LIBRARIUM_MAIL_SAVE = "Save Mail",
 	--LIBRARIUM_DUPLICATE_MAIL_SAVE = "Duplicate Mail Save",
-	LIBRARIUM_HIRELING_MAIL_KEYWORD = "material",
+	LIBRARIUM_HIRELING_MAIL_KEYWORD = " no refinados",
 	--LIBRARIUM_EDITOR_SEND_MAIL_NAME = "Send Mail to Alianym?",
-	LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_MAIL_SAVED = "Mail gesichert",
-	LIBRARIUM_EDITOR_ANNOUNCE_SAVED_MAIL_REMOVED = "Gesicherte Mail entfernt",
+	--LIBRARIUM_EDITOR_ANNOUNCE_CUSTOM_MAIL_SAVED = "Mail Saved",
+	--LIBRARIUM_EDITOR_ANNOUNCE_SAVED_MAIL_REMOVED = "Saved Mail Removed",
 
 	--LIBRARIUM_DIALOGS_CUSTOM_BOOK_OVERWRITE = "Would you like to Overwrite the existing book?",
 	--LIBRARIUM_DIALOGS_CUSTOM_BOOK_DELETE = "Confirm deletion of the custom book? This will be permanent upon /reloadui or logout.",
@@ -50,7 +50,7 @@ local stringsDE = {
 	--LIBRARIUM_SETTINGS_RELOADUI_WARNING = "Will automatically reload the UI.",
 
 	--LIBRARIUM_SETTINGS_DESCRIPTION_TEXT = "To set an <Interaction Keybind> go to CONTROLS Menu -> LibAlianym -> Interaction Key\nTo set a <Toggle Menu Keybind> go to CONTROLS Menu -> Alianym's Suite -> Open Librarium",
-	LIBRARIUM_SETTINGS_ACCOUNT_WIDE = "Kontoweite",
+	LIBRARIUM_SETTINGS_ACCOUNT_WIDE = "Toda la Cuenta",
 	--LIBRARIUM_SETTINGS_ACCOUNT_WIDE_TOOLTIP = "Select to have an Account-Wide Librarium.",
 	--LIBRARIUM_SETTINGS_RESET_BUTTON_NAME = "Reset the Librarium",
 	--LIBRARIUM_SETTINGS_RESET_BUTTON_TOOLTIP = "This will delete every user-created and discovered book in the Librarium",
@@ -69,20 +69,21 @@ local stringsDE = {
 	----
 	--Mail Date Strings
 	----
-	LIBRARIUM_MONTH_ONE = "Morgenstern",
-	LIBRARIUM_MONTH_TWO = "Sonnenaufgang",
-	LIBRARIUM_MONTH_THREE = "Erstsaat",
-	LIBRARIUM_MONTH_FOUR = "RegenHand",
-	LIBRARIUM_MONTH_FIVE = "Zweitsaat",
-	LIBRARIUM_MONTH_SIX = "Mittjahr",
-	LIBRARIUM_MONTH_SEVEN = "Sonnenhöhe",
-	LIBRARIUM_MONTH_EIGHT = "Letzte Saat",
-	LIBRARIUM_MONTH_NINE = "Herdfeuer",
-	LIBRARIUM_MONTH_TEN = "Eisherbst",
-	LIBRARIUM_MONTH_ELEVEN = "Sonnenuntergang",
-	LIBRARIUM_MONTH_TWELVE = "Abendstern",
+	--LIBRARIUM_MONTH_ONE = "Morning Star",
+	--LIBRARIUM_MONTH_TWO = "Sun's Dawn",
+	--LIBRARIUM_MONTH_THREE = "First Seed",
+	--LIBRARIUM_MONTH_FOUR = "Rain's Hand",
+	--LIBRARIUM_MONTH_FIVE = "Second Seed",
+	--LIBRARIUM_MONTH_SIX = "Midyear",
+	--LIBRARIUM_MONTH_SEVEN = "Sun's Height",
+	--LIBRARIUM_MONTH_EIGHT = "Last Seed",
+	--LIBRARIUM_MONTH_NINE = "Hearthfire",
+	--LIBRARIUM_MONTH_TEN = "Frostfall",
+	--LIBRARIUM_MONTH_ELEVEN = "Sun's Dusk",
+	--LIBRARIUM_MONTH_TWELVE = "Evening Star",
 }
 
-for id, stringVar in pairs(stringsDE) do
-   SafeAddString(_G[id], stringVar, 2)
+for id, stringVar in pairs(stringsES) do
+   ZO_CreateStringId(id, stringVar)
+   SafeAddVersion(id, 2)
 end
