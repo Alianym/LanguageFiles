@@ -13,6 +13,7 @@ local stringsFR = {
 	--TQG_CONFIRM_QUEST_POI = "Points d'intérêt",
 
 	SI_BINDING_NAME_TQG_INTERACT_KEY = "Bascule Guide de Quêtes",
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>> – <<2>>", "Bascule Guide de Quêtes", GetString(SI_GAMEPAD_SECTION_HEADER)),
 	TQG_MENU_JOURNAL = "Le Guide de Quêtes",
 
 	TQG_OVERVIEW_TAB = "Général",
@@ -23,46 +24,32 @@ local stringsFR = {
 	TQG_OVERVIEW_DLC_TITLE = "DLC + Chapitres",
 	TQG_OVERVIEW_GROUP_TITLE = "Contenu du groupe",
 
-	TQG_CLASSIC_TAB = "Classique",
-	TQG_DLC_TAB = "Pack de jeu téléchargeable",
-	TQG_GROUP_TAB = "Groupe",
-
 	TQG_QUEST_BTN = "Classique: Carte de Quête",
-	TQG_CRAGLORN_BTN = "Classique: Raidlorn",
 	TQG_IC_BTN = "DLC: Imperial City",
 	TQG_ORSINIUM_BTN = "DLC: Orsinium",
 
 	TQG_OVERVIEW_LINKS_TITLE = "Liens utiles",
 	TQG_OVERVIEW_LINKS_TEXT = "Dû à la nature des liens, des spoilers sont évidemment possibles. Vous êtes donc prévenu...",
-	TQG_OVERVIEW_OBJECTIVE_TITLE = "Notes",
 	TQG_OVERVIEW_OBJECTIVE_TEXT = "La taille du groupe pour les contenus varie selon les individus. L'Arène de Maelstrom est une arène en solo, vous allez donc devoir faire face à ses horreurs tout seul.\n\n(En règle générale, les quêtes de Donjons ne sont pas répétables, cependant les quêtes de Raids le sont hebdomadairement.Vous aurez cependant uniquement à les compléter une fois pour les valider.)",
-	TQG_DEFAULT_QUEST_COMPLETE = "Accompli",
-	TQG_DEFAULT_QUEST_INCOMPLETE = "Incomplet",
 
 	TQG_PROLOGUE = "Prologue",
 	TQG_EPILOGUE = "Épilogue",
 	TQG_PREREQ = "Prérequis",
 
-	TQG_DUNGEON = "Donjon",
 	TQG_ARENA = "Arène",
-	TQG_TRIAL = "Épreuve",
 
 	TQG_ENTER = "Entrer",
 	TQG_SEEK = "Trouver",
 
 	TQG_PLANEMELD = "La Coalescence",
 
-	TQG_DOMINION = "Domaine aldmeri",
-	TQG_COVENANT = "Alliance de Daguefilante",
-	TQG_PACT = "Pacte de Cœurébène",
-	TQG_COLDHARBOUR = "Havreglace",
-	TQG_CRAGLORN = "Raidelorn",
 	TQG_GUILDS_AND_GLORY = "Guildes et gloire",
-	TQG_DAEDRIC_WAR = "5: Guerre Daedrique",
+	TQG_DAEDRIC_WAR = "Guerre Daedrique",
 	TQG_MURKMIRE = "Tourbevase: Intermède",
 	TQG_CHAPTER_ELSWEYR = "Saison du Dragon",
 	TQG_CHAPTER_SKYRIM = "Le Cœur noir de Bordeciel",
 	TQG_CHAPTER_BLACKWOOD = "Les Portes d'Oblivion",
+	TQG_CHAPTER_HIGH_ISLE = "L’Héritage des Brétons",
 
 	TQG_INVITATION = "Une Invitation",
 	TQG_FIGHTERS_NAME = "Guilde des guerriers",
@@ -74,7 +61,7 @@ local stringsFR = {
 	TQG_BONUS_BALMORA_DESC = "Le gouvernement de Morrowind a autorisé le Morag Tong il y a bien longtemps, lors de la Première Ère, et à ce jour, elle continue de mener des assassinats tacitement légaux, avec un système de contrats appelés « Ordres honorables d'execution ».",
 }
 
-for id, string in pairs(stringsFR) do
+for id, stringVar in pairs(stringsFR) do
    SafeAddString(_G[id], stringVar, 2)
 end
 

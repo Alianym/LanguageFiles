@@ -13,56 +13,42 @@ local stringsDE = {
 	--TQG_CONFIRM_QUEST_POI = "Interessante Orte",
 
 	SI_BINDING_NAME_TQG_INTERACT_KEY = "Anzeige Quest-Leitfaden",
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>> – <<2>>", "Anzeige Quest-Leitfaden", GetString(SI_GAMEPAD_SECTION_HEADER)),
 	TQG_MENU_JOURNAL = "Der Quest-Leitfaden",
 
-	TQG_OVERVIEW_TAB = "Übersicht",
-	--TQG_OVERVIEW_CLASSIC_DESC = "",
-	--TQG_OVERVIEW_DLC_DESC = "",
-	--TQG_OVERVIEW_GROUP_DESC = "",
+	--TQG_OVERVIEW_CLASSIC_DESC = "The Planemeld Arc... This is the original ESO story in the Aurbis, and the tale will interweave amongst Main Story, Alliance, and Guild Storylines as you progress.\n\nAlliance Stories happen in parallel – e.g. Starter Island(s), then Auridon/Glenumbra/Stonefalls, etc. You should not feel like you have to complete every Alliance Story before reaching Coldharbour, however.\n\nThe original Alliance Story pathway was;\n – The story of your character's Alliance; then Cadwell's Silver/Gold which represented the other two Alliances, in clockwise order as a 'post-Main Quest' experience.",
+	--TQG_OVERVIEW_DLC_DESC = "The DLC section covers off every major storyline since the introduction of the DLC dungeons, zones, and Chapters. The order presented defaults to the order of release.\n\nMajor Events include:\n – The Sublime Plot\n – Reforging Orsinium\n – Thieves Guild / Dark Brotherhood\n – Daedric War\n – A Lost Legacy\n – Season of the Dragon\n – Dark Heart of Skyrim\n – Gates of Oblivion",
+	--TQG_OVERVIEW_GROUP_DESC = strfmt(overviewGroupTabDescFmt, "The Group section includes the majority of instanced Group Content to-date.", "Dungeons: ", overviewGroupTabDungIcon, "Trials: ", overviewGroupTabTrialIcon, "Arenas: ", overviewGroupTabArenaIconOne, overviewGroupTabArenaIconTwo, "There are normal, veteran, and occasionally hard-mode versions of the content, but with the exception of Maelstrom Arena (which only requires the normal-mode quest), the Guide does not care on which difficulty you complete the quest.", "The quests are still tied to the content with which they released. E.G., Maw of Lorkhaj is in Reaper's March, but released with Thieves Guild, so it will be listed under the latter."),
 
 	TQG_OVERVIEW_DLC_TITLE = "DLC + Kapitel",
 	TQG_OVERVIEW_GROUP_TITLE = "Inhalt der Gruppe",
 
-	TQG_CLASSIC_TAB = "Klassisch",
-	TQG_DLC_TAB = "DLC",
-	TQG_GROUP_TAB = "Gruppe",
-
 	TQG_QUEST_BTN = "Klassisch: Quest Karte",
-	TQG_CRAGLORN_BTN = "Klassisch: Kargstein",
 	TQG_IC_BTN = "DLC: The Sublime Plot",
 	TQG_ORSINIUM_BTN = "DLC: Reforging Orsinium",
 
-	--TQG_OVERVIEW_LINKS_TITLE = "",
-	--TQG_OVERVIEW_LINKS_TEXT = "",
-	TQG_OVERVIEW_OBJECTIVE_TITLE = "Notizen",
-	--TQG_OVERVIEW_OBJECTIVE_TEXT = "",
-	TQG_DEFAULT_QUEST_COMPLETE = "Abgeschlossen",
-	TQG_DEFAULT_QUEST_INCOMPLETE = "Unvollständig",
+	--TQG_OVERVIEW_LINKS_TITLE = "Useful Links",
+	--TQG_OVERVIEW_LINKS_TEXT = "Due to the nature of the links, spoilers are more likely the deeper you delve. Be forewarned...",
+	--TQG_OVERVIEW_OBJECTIVE_TEXT = "Required group size for the content will vary according to the individuals. Maelstrom Arena is a solo Arena–You will face it's horrors alone.\n\n(As a general rule, Dungeon quests are not repeatable, while Trial quests are repeatable weekly. You will only need to complete them once to register them.)",
 
 	TQG_PROLOGUE = "Prolog",
 	TQG_EPILOGUE = "Epilog",
 	TQG_PREREQ = "Voraussetzung",
 
-	TQG_DUNGEON = "Verlies",
 	TQG_ARENA = "Arena",
-	TQG_TRIAL = "Prüfung",
 
 	TQG_ENTER = "eingeben",
 	TQG_SEEK = "suchen",
 	
 	TQG_PLANEMELD = "Die Ebenenverschmelzung",
 
-	TQG_DOMINION = "Aldmeri-Dominion",
-	TQG_COVENANT = "Dolchsturz-Bündnis",
-	TQG_PACT = "Ebenherz-Pakt",
-	TQG_COLDHARBOUR = "Kalthafen",
-	TQG_CRAGLORN = "Kargstein",
 	TQG_GUILDS_AND_GLORY = "Gilden und Ruhm",
 	TQG_DAEDRIC_WAR = "Daedrisches Kreig",
 	TQG_MURKMIRE = "Trübmoor: Zwischenspiel",
 	TQG_CHAPTER_ELSWEYR = "Saison des Drachen",
 	TQG_CHAPTER_SKYRIM = "Das Schwarze Herz von Skyrim",
 	TQG_CHAPTER_BLACKWOOD = "Tore von Oblivion",
+	TQG_CHAPTER_HIGH_ISLE = "Vermächtnis der Bretonen",
 
 	TQG_INVITATION = "Eine Einladung",
 	TQG_FIGHTERS_NAME = "Kriegergilde",
@@ -74,7 +60,7 @@ local stringsDE = {
 	TQG_BONUS_BALMORA_DESC = 'Die Regierung von Morrowind sanktionierte die Morag Tong vor langer Zeit, noch während der Ersten Ära, und bis heute führen sie Attentate durch, die stillschweigend legal sind; dabei nutzen sie ein System das als „ehrbahre Schriebe der Hinrichtung" bekannt ist.',
 }
 
-for id, string in pairs(stringsDE) do
+for id, stringVar in pairs(stringsDE) do
    SafeAddString(_G[id], stringVar, 2)
 end
 

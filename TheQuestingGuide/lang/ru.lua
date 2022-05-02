@@ -10,57 +10,43 @@ local stringsRU = {
 	--TQG_CONFIRM_QUEST_POI = "Точки интереса",
 
 	SI_BINDING_NAME_TQG_INTERACT_KEY = "Включает/отключает Руководство по квестам",
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>> – <<2>>", "Включает/отключает Руководство по квестам", GetString(SI_GAMEPAD_SECTION_HEADER)),
 	TQG_MENU_JOURNAL = "Руководство квест",
 
-	TQG_OVERVIEW_TAB = "Общие сведения",
-	--TQG_OVERVIEW_CLASSIC_DESC = "",
-	--TQG_OVERVIEW_DLC_DESC = "",
-	--TQG_OVERVIEW_GROUP_DESC = "",
+	--TQG_OVERVIEW_CLASSIC_DESC = "The Planemeld Arc... This is the original ESO story in the Aurbis, and the tale will interweave amongst Main Story, Alliance, and Guild Storylines as you progress.\n\nAlliance Stories happen in parallel – e.g. Starter Island(s), then Auridon/Glenumbra/Stonefalls, etc. You should not feel like you have to complete every Alliance Story before reaching Coldharbour, however.\n\nThe original Alliance Story pathway was;\n – The story of your character's Alliance; then Cadwell's Silver/Gold which represented the other two Alliances, in clockwise order as a 'post-Main Quest' experience.",
+	--TQG_OVERVIEW_DLC_DESC = "The DLC section covers off every major storyline since the introduction of the DLC dungeons, zones, and Chapters. The order presented defaults to the order of release.\n\nMajor Events include:\n – The Sublime Plot\n – Reforging Orsinium\n – Thieves Guild / Dark Brotherhood\n – Daedric War\n – A Lost Legacy\n – Season of the Dragon\n – Dark Heart of Skyrim\n – Gates of Oblivion",
+	--TQG_OVERVIEW_GROUP_DESC = strfmt(overviewGroupTabDescFmt, "The Group section includes the majority of instanced Group Content to-date.", "Dungeons: ", overviewGroupTabDungIcon, "Trials: ", overviewGroupTabTrialIcon, "Arenas: ", overviewGroupTabArenaIconOne, overviewGroupTabArenaIconTwo, "There are normal, veteran, and occasionally hard-mode versions of the content, but with the exception of Maelstrom Arena (which only requires the normal-mode quest), the Guide does not care on which difficulty you complete the quest.", "The quests are still tied to the content with which they released. E.G., Maw of Lorkhaj is in Reaper's March, but released with Thieves Guild, so it will be listed under the latter."),
 
 	TQG_OVERVIEW_DLC_TITLE = "Дополнение + Глава",
 	TQG_OVERVIEW_GROUP_TITLE = "Групповой контент",
 
-	TQG_CLASSIC_TAB = "классический",
-	TQG_DLC_TAB = "Дополнение",
-	TQG_GROUP_TAB = "Группa",
+	--TQG_QUEST_BTN = "Classic: Quest Map",
+	--TQG_IC_BTN = "DLC: The Sublime Plot",
+	--TQG_ORSINIUM_BTN = "DLC: Reforging Orsinium",
 
-	TQG_QUEST_BTN = "Classic: Quest Map",
-	TQG_CRAGLORN_BTN = "Classic: Craglorn",
-	TQG_IC_BTN = "DLC: The Sublime Plot",
-	TQG_ORSINIUM_BTN = "DLC: Reforging Orsinium",
-
-	--TQG_OVERVIEW_LINKS_TITLE = "",
-	--TQG_OVERVIEW_LINKS_TEXT = "",
-	TQG_OVERVIEW_OBJECTIVE_TITLE = "Примечания",
-	--TQG_OVERVIEW_OBJECTIVE_TEXT = "",
-	TQG_DEFAULT_QUEST_COMPLETE = "Завершено",
-	TQG_DEFAULT_QUEST_INCOMPLETE = "Не получено",
+	--TQG_OVERVIEW_LINKS_TITLE = "Useful Links",
+	--TQG_OVERVIEW_LINKS_TEXT = "Due to the nature of the links, spoilers are more likely the deeper you delve. Be forewarned...",
+	--TQG_OVERVIEW_OBJECTIVE_TEXT = "Required group size for the content will vary according to the individuals. Maelstrom Arena is a solo Arena–You will face it's horrors alone.\n\n(As a general rule, Dungeon quests are not repeatable, while Trial quests are repeatable weekly. You will only need to complete them once to register them.)",
 
 	TQG_PROLOGUE = "Пролог",
 	TQG_EPILOGUE = "эпилог",
 	TQG_PREREQ = "Необходимое условие",
 
-	TQG_DUNGEON = "Подземелье",
 	TQG_ARENA = "Aренa",
-	TQG_TRIAL = "Испытание",
 
 	TQG_ENTER = "Ввести",
 	TQG_SEEK = "Найти",
 
 	TQG_PLANEMELD = "Слияния миров",
 
-	TQG_DOMINION = "Альдмерский Доминион",
-	TQG_COVENANT = "Даггерфольский Ковенант",
-	TQG_PACT = "Эбонхартский Пакт",
-	TQG_COLDHARBOUR = "Хладной Гавани",
-	TQG_CRAGLORN = "Краглорн",
 	TQG_GUILDS_AND_GLORY = "Гильдии и Слава",
 	TQG_DAEDRIC_WAR = "Даэдрический Война",
 	TQG_MURKMIRE = "Мрачные Трясины: интерлюдия",
 	TQG_CHAPTER_ELSWEYR = "Драконий Оплот",
 	TQG_CHAPTER_SKYRIM = "Темное Сердце Скайрима",
 	TQG_CHAPTER_BLACKWOOD = "Врата Обливиона",
-
+	TQG_CHAPTER_HIGH_ISLE = "Бретонское наследие",
+	
 	TQG_INVITATION = "Приглашение",
 	TQG_FIGHTERS_NAME = "Гильдия бойцов",
 	TQG_FIGHTERS_DESC = 'Гильдия воинов была создана в соответствии с разделом 4 Закона о гильдиях, и эта хартия была впервые утверждена в 321 году второй эры как часть правления Потентат Версидью-Шайе',
@@ -71,7 +57,7 @@ local stringsRU = {
 	TQG_BONUS_BALMORA_DESC = "Правительство Морровинда санкционировало деятельность Мораг Тонг еще в Первую эру, и по сей день они продолжают совершать негласно законные убийства, используя систему контрактов, известную как «приказы о благородной казни».",
 }
 
-for id, string in pairs(stringsRU) do
+for id, stringVar in pairs(stringsRU) do
    SafeAddString(_G[id], stringVar, 2)
 end
 
