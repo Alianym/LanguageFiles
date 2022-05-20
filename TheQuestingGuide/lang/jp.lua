@@ -6,55 +6,59 @@ local overviewGroupTabArenaIconOne = "/esoui/art/icons/poi/poi_groupinstance_com
 local overviewGroupTabArenaIconTwo = "/esoui/art/icons/poi/poi_raiddungeon_complete.dds"
 
 local stringsJP = {
-	--TQG_CONFIRM_QUEST_ZONE_STORY = "Zone Story",
-	--TQG_CONFIRM_QUEST_POI = "Points of Interest",
+	--TQG_CONFIRM_QUEST_ZONE_STORY = "ゾーンストーリー",
+	--TQG_CONFIRM_QUEST_POI = "サイドクエスト",
 
-	--SI_BINDING_NAME_TQG_INTERACT_KEY = "Toggle Quest Guide",
-	--SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>> � <<2>>", "Toggle Quest Guide", GetString(SI_GAMEPAD_SECTION_HEADER)),
-	--TQG_MENU_JOURNAL = "The Questing Guide",
+	SI_BINDING_NAME_TQG_INTERACT_KEY = "クエストガイドの表示",
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>>(<<2>>)", "クエストガイドの表示", GetString(SI_GAMEPAD_SECTION_HEADER)),
+	TQG_MENU_JOURNAL = "クエストガイド",
 
-	--TQG_OVERVIEW_CLASSIC_DESC = "The Planemeld Arc... This is the original ESO story in the Aurbis, and the tale will interweave amongst Main Story, Alliance, and Guild Storylines as you progress.\n\nAlliance Stories happen in parallel � e.g. Starter Island(s), then Auridon/Glenumbra/Stonefalls, etc. You should not feel like you have to complete every Alliance Story before reaching Coldharbour, however.\n\nThe original Alliance Story pathway was;\n � The story of your character's Alliance; then Cadwell's Silver/Gold which represented the other two Alliances, in clockwise order as a 'post-Main Quest' experience.",
-	--TQG_OVERVIEW_DLC_DESC = "The DLC section covers off every major storyline since the introduction of the DLC dungeons, zones, and Chapters. The order presented defaults to the order of release.\n\nMajor Events include:\n � The Sublime Plot\n � Reforging Orsinium\n � Thieves Guild / Dark Brotherhood\n � Daedric War\n � A Lost Legacy\n � Season of the Dragon\n � Dark Heart of Skyrim\n � Gates of Oblivion",
-	--TQG_OVERVIEW_GROUP_DESC = strfmt(overviewGroupTabDescFmt, "The Group section includes the majority of instanced Group Content to-date.", "Dungeons: ", overviewGroupTabDungIcon, "Trials: ", overviewGroupTabTrialIcon, "Arenas: ", overviewGroupTabArenaIconOne, overviewGroupTabArenaIconTwo, "There are normal, veteran, and occasionally hard-mode versions of the content, but with the exception of Maelstrom Arena (which only requires the normal-mode quest), the Guide does not care on which difficulty you complete the quest.", "The quests are still tied to the content with which they released. E.G., Maw of Lorkhaj is in Reaper's March, but released with Thieves Guild, so it will be listed under the latter."),
+	TQG_OVERVIEW_CLASSIC_DESC = "次元融合編... タムリエル大陸を含むアービスにおける『ESO』オリジナルの物語です。メインストーリーに加えて、所属する同盟やギルドのストーリーを織り交ぜながら物語が進行していきます。同盟ストーリーは、初期エリアの島、次にオーリドン／グレナンブラ／ストーンフォール、・・・といった具合に勢力ごとに並列していますが、コールドハーバーに到達する前に各勢力の同盟ストーリーを全て完了させる必要はありません。\n\n当初の同盟ストーリーの道筋は次のとおりです。\n・自分のキャラクターが所属する同盟の物語\n・メインストーリーのクリア後に、キャドウェルのシルバー／ゴールドとして開始される他の２つの同盟ストーリーの追体験",
+	TQG_OVERVIEW_DLC_DESC = "DLCセクションでは、ダンジョンDLC、ゾーンDLC、チャプターの導入以降の主要なストーリーを網羅しています。表示順はデフォルトでリリース順になっています。\n\n主なイベントは以下の通りです。\n・卓越した陰謀（帝都）\n・オルシニウムの再建\n・盗賊ギルド／闇の一党\n・デイドラ戦争\n・失われた遺産（マークマイア）\n・ドラゴンのシーズン\n・スカイリムの闇の中心\n・オブリビオンの門\n・ブレトンの伝統\n",
+	TQG_OVERVIEW_GROUP_DESC = strfmt(overviewGroupTabDescFmt, "グループセクションには、これまでにインスタンス化されたグループコンテンツの大半が含まれています。", "ダンジョン: ", overviewGroupTabDungIcon, "試練: ", overviewGroupTabTrialIcon, "アリーナ: ", overviewGroupTabArenaIconOne, overviewGroupTabArenaIconTwo, "ノーマル、ベテラン、時にはハードモードもありますが、ノーマルモードのクエストのクリアが必要なメイルストローム・アリーナを除いて、このガイドではどの難易度のクエストをクリアしても問題ありません。", "クエストは、リリースされたコンテンツに関連付けられています。例えば、モー・オブ・ローカジュはリーパーズマーチにありますが、盗賊ギルドDLCでリリースされているので、後者にリストされています。"), 
 
-	--TQG_OVERVIEW_DLC_TITLE = "DLC + Chapters",
-	--TQG_OVERVIEW_GROUP_TITLE = "Group Content",
+	TQG_OVERVIEW_DLC_TITLE = "DLC + チャプター",
+	TQG_OVERVIEW_GROUP_TITLE = "グループコンテンツ",
 
-	--TQG_QUEST_BTN = "Classic: Quest Map",
-	--TQG_IC_BTN = "DLC: The Sublime Plot",
-	--TQG_ORSINIUM_BTN = "DLC: Reforging Orsinium",
+	TQG_CLASSIC_TAB = "ベースゲーム", -- 'The Base Game' is more familiar to Japanese players than translated word of 'Classic'.
 
-	--TQG_OVERVIEW_LINKS_TITLE = "Useful Links",
-	--TQG_OVERVIEW_LINKS_TEXT = "Due to the nature of the links, spoilers are more likely the deeper you delve. Be forewarned...",
-	--TQG_OVERVIEW_OBJECTIVE_TEXT = "Required group size for the content will vary according to the individuals. Maelstrom Arena is a solo Arena�You will face it's horrors alone.\n\n(As a general rule, Dungeon quests are not repeatable, while Trial quests are repeatable weekly. You will only need to complete them once to register them.)",
+	TQG_QUEST_BTN = "クエスト案内図",
+	TQG_CRAGLORN_BTN = zo_strformat("<<1>>", GetZoneNameById(888)),
 
-	--TQG_PROLOGUE = "Prologue",
-	--TQG_EPILOGUE = "Epilogue",
-	--TQG_PREREQ = "Prerequisite",
+	TQG_IC_BTN = "DLC:インペリアルシティ",
+	TQG_ORSINIUM_BTN = "DLC:オルシニウム",
 
-	--TQG_ARENA = "Arena",
+	TQG_OVERVIEW_LINKS_TITLE = "便利なリンク",
+	TQG_OVERVIEW_LINKS_TEXT = "リンク先ホームページの性質上、熟読するほどネタバレの可能性が高くなります。ご承知おきください...",
+	TQG_OVERVIEW_OBJECTIVE_TEXT = "各コンテンツの必要人数は参加メンバーにより異なります。メイルストローム・アリーナはソロアリーナであり、一人でその恐怖に立ち向かうことになります。\n\n（原則として、ダンジョンクエストは再プレイ不可、試練クエストは毎週再プレイ可です。登録するには１度クリアする必要があります。）",
 
-	--TQG_ENTER = "Enter",
-	--TQG_SEEK = "Seek out",
+	TQG_PROLOGUE = "プロローグ",
+	TQG_EPILOGUE = "エピローグ",
+	TQG_PREREQ = "前提条件",
+
+	TQG_ARENA = "アリーナ",
+
+	TQG_ENTER = "を入力する",
+	TQG_SEEK = "を探す",
 	
-	--TQG_PLANEMELD = "The Planemeld",
+	TQG_PLANEMELD = "次元融合",
 
-	--TQG_GUILDS_AND_GLORY = "Guilds and Glory",
-	--TQG_DAEDRIC_WAR = "Daedric War",
-	--TQG_MURKMIRE = "Murkmire: Interlude",
-	--TQG_CHAPTER_ELSWEYR = "Season of the Dragon",
-	--TQG_CHAPTER_SKYRIM = "Dark Heart of Skyrim",
-	--TQG_CHAPTER_BLACKWOOD = "Gates of Oblivion",
-	--TQG_CHAPTER_HIGH_ISLE = "Legacy of the Bretons",
+	TQG_GUILDS_AND_GLORY = "ギルドと栄光",
+	TQG_DAEDRIC_WAR = "デイドラ戦争",
+	TQG_MURKMIRE = "マークマイア: 幕間",
+	TQG_CHAPTER_ELSWEYR = "ドラゴンのシーズン",
+	TQG_CHAPTER_SKYRIM = "スカイリムの闇の中心",
+	TQG_CHAPTER_BLACKWOOD = "オブリビオンの門",
+	TQG_CHAPTER_HIGH_ISLE = "ブレトンの伝統",
 
-	--TQG_INVITATION = "An Invitation",
-	--TQG_FIGHTERS_NAME = "Fighters Guild",
-	--TQG_FIGHTERS_DESC = 'The Guild of Fighters was established under the section 4 of the "Guilds Act," and this charter was first confirmed under the Potentate Versidue-Shaie in the 321st year of the Second Era.',
-	--TQG_MAGES_NAME = "Mages Guild",
-	--TQG_MAGES_DESC = 'The Guild of Mages was established on Summerset Isle in the year 230 of the Second Era by Vanus Galerion and Rilis XII. It was later confirmed by the "Guilds Act" of Potentate Versidue-Shaie.',
-	--TQG_DOSHIA_LAIR = "Doshia's Lair",
-	--TQG_BONUS_BALMORA = "Bonus: Balmora",
-	--TQG_BONUS_BALMORA_DESC = 'The Morrowind government sanctioned the Morag Tong long ago during the First Era, and to this day they continue to perform tacitly legal assassinations, utilizing a system of contracts known as "honorable writs of execution."',
+	TQG_INVITATION = "招待",
+	TQG_FIGHTERS_NAME = "戦士ギルド",
+	TQG_FIGHTERS_DESC = '戦士ギルドは、第二紀321年に最高顧問ヴェルシデュ・シャイエにより採択されたギルド法案第4条に基づき設立された、帝国公認ギルドである。',
+	TQG_MAGES_NAME = "魔術師ギルド",
+	TQG_MAGES_DESC = '魔術師ギルドは、第二紀230年にヴァヌス・ガレリオンとライリスXII世によりサマーセット諸島で設立された。その後、最高顧問ヴェルシデュ・シャイエのギルド法案により帝国公認ギルドとして承認された。',
+	TQG_DOSHIA_LAIR = "ドシアの隠れ家",
+	TQG_BONUS_BALMORA = "番外: バルモラ",
+	TQG_BONUS_BALMORA_DESC = 'モロウウィンドの統治者が第一紀の昔にモラグ・トングを公認してから今日にいたるまで、モラグ・トングの暗殺者たちは「名誉ある処刑令状」という契約制度を利用して、暗黙のうちに合法的な暗殺を行い続けている。',
 }
 
 for id, stringVar in pairs(stringsJP) do
@@ -62,24 +66,24 @@ for id, stringVar in pairs(stringsJP) do
    SafeAddVersion(id, 1)
 end
 
-local DLCTooltipFmt = "<<1>>, <<2>>: <<3>>\n(<<4>> <<5>>)"
+local DLCTooltipFmt = "<<1>>, <<2>>: <<3>>\n(<<5>> <<4>>)"
 local function SetupDLCTooltip(str1, str2, zoneId, str4, str5)
 	return zo_strformat(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
 end
 
---[[TQG.DLCQuestIdToTooltip = {
-	[5935] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 849, GetString(TQG_SEEK), "'Rhea Opacarius'"),
-	[6023] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 980, GetString(TQG_SEEK), "'Order of the Eye Dispatch'"),
-	[6097] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 1011, GetString(TQG_SEEK), "'Vanus Galerion'"),
-	[6226] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 726, GetString(TQG_SEEK), "'Cyrodiilic Collections Needs You!'"),
-	[6242] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "2/2", 726, GetString(TQG_SEEK), "'Concordia Mercius'"),
-	[6299] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 1086, GetString(TQG_SEEK), "'Anais Davaux'"),
-	[6306] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "2/2", 1086, GetString(TQG_SEEK), "'Abnur Tharn'"),
-	[6395] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 1133, GetString(TQG_SEEK), "'Hinzuur'"),
-	[6398] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "2/2", 1133, "Visit", "'Valley of Blades'"),
-}]]
+TQG.DLCQuestIdToTooltip = {
+	[5935] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 849, GetString(TQG_SEEK), "'レア・オパカリウス'"),
+	[6023] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 980, GetString(TQG_SEEK), "'目の騎士団の派遣'"),
+	[6097] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 1011, GetString(TQG_SEEK), "'ヴァヌス・ガレリオン'"),
+	[6226] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 726, GetString(TQG_SEEK), "'シロディール・コレクションにご協力を！'"),
+	[6242] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "2/2", 726, GetString(TQG_SEEK), "'コンコルディア・メルシウス'"),
+	[6299] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 1086, GetString(TQG_SEEK), "'アナイス・ダヴォー'"),
+	[6306] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "2/2", 1086, GetString(TQG_SEEK), "'アブナー・サルン'"),
+	[6395] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 1133, GetString(TQG_SEEK), "'ヒンズール'"),
+	[6398] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "2/2", 1133, "を訪れる", "'剣の渓谷'"),
+}
 
-local groupTooltipFmt = "<<1>>: (<<2>> <<3>>)"
+local groupTooltipFmt = "<<1>>: (<<3>> <<2>>)"
 local function SetupGroupTooltip(str1, str2, zoneIdOrName)
 	local str3
 
@@ -89,17 +93,19 @@ local function SetupGroupTooltip(str1, str2, zoneIdOrName)
 	return zo_strformat(groupTooltipFmt, str1, str2, str3)
 end
 
---[[TQG.GroupQuestIdToTooltip = {
-	[5554] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Bakhum"),
+TQG.GroupQuestIdToTooltip = {
+	[5554] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "バクーム"),
 
-	[6000] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Daynillo Rethul"),
-	[6193] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Vandoril"),
+	[6000] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "デイニロ・レサル"),
+	[6193] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "ヴァンドリル"),
 
-	[6354] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Natrada"),
+	[6354] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "ナトラダ"),
 
-	[6504] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Tyrvera"),
+	[6504] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "ティルヴェラ"),
 
-	[6597] = SetupGroupTooltip(GetString(TQG_ARENA), GetString(TQG_SEEK), "Angair"),
+	[6597] = SetupGroupTooltip(GetString(TQG_ARENA), GetString(TQG_SEEK), "アンガイル"),
 
-	[6655] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Malosza"),
-}]]
+	[6655] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "マロスザ"),
+
+	[6784] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "ヨーマン・ゲリーン"),
+}
