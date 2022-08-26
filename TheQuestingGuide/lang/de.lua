@@ -1,7 +1,5 @@
--- „ (Alt+0132)
--- Die Ebenenverschmelzung Erzählung... / The Planemeld Arc...
-
 local strfmt = string.format
+local zStrFmt = zo_strformat
 local overviewGroupTabDescFmt = "%s %s|t26:26:%s|t %s|t26:26:%s|t %s|t26:26:%s|t / |t26:26:%s|t\n\n%s\n\n%s"
 local overviewGroupTabDungIcon = "/esoui/art/icons/poi/poi_groupinstance_complete.dds"
 local overviewGroupTabTrialIcon = "/esoui/art/icons/poi/poi_raiddungeon_complete.dds"
@@ -13,7 +11,7 @@ local stringsDE = {
 	--TQG_CONFIRM_QUEST_POI = "Interessante Orte",
 
 	SI_BINDING_NAME_TQG_INTERACT_KEY = "Anzeige Quest-Leitfaden",
-	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>> – <<2>>", "Anzeige Quest-Leitfaden", GetString(SI_GAMEPAD_SECTION_HEADER)),
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zStrFmt("<<1>> – <<2>>", "Anzeige Quest-Leitfaden", GetString(SI_GAMEPAD_SECTION_HEADER)),
 	TQG_MENU_JOURNAL = "Der Quest-Leitfaden",
 
 	--TQG_OVERVIEW_CLASSIC_DESC = "The Planemeld Arc... This is the original ESO story in the Aurbis, and the tale will interweave amongst Main Story, Alliance, and Guild Storylines as you progress.\n\nAlliance Stories happen in parallel – e.g. Starter Island(s), then Auridon/Glenumbra/Stonefalls, etc. You should not feel like you have to complete every Alliance Story before reaching Coldharbour, however.\n\nThe original Alliance Story pathway was;\n – The story of your character's Alliance; then Cadwell's Silver/Gold which represented the other two Alliances, in clockwise order as a 'post-Main Quest' experience.",
@@ -44,7 +42,7 @@ local stringsDE = {
 
 	TQG_GUILDS_AND_GLORY = "Gilden und Ruhm",
 	TQG_DAEDRIC_WAR = "Daedrisches Kreig",
-	TQG_MURKMIRE = "Trübmoor: Zwischenspiel",
+	TQG_MURKMIRE = zStrFmt("<<1>>: <<2>>", GetZoneNameById(726), "Zwischenspiel"),
 	TQG_CHAPTER_ELSWEYR = "Saison des Drachen",
 	TQG_CHAPTER_SKYRIM = "Das Schwarze Herz von Skyrim",
 	TQG_CHAPTER_BLACKWOOD = "Tore von Oblivion",
@@ -66,7 +64,7 @@ end
 
 local DLCTooltipFmt = "<<1>>, <<2>>: <<3>>\n(<<4>> <<5>>)"
 local function SetupDLCTooltip(str1, str2, zoneId, str4, str5)
-	return zo_strformat(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
+	return zStrFmt(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
 end
 
 TQG.DLCQuestIdToTooltip = {
@@ -88,7 +86,7 @@ local function SetupGroupTooltip(str1, str2, zoneIdOrName)
 	if type(zoneIdOrName) == "number" then str3 = GetZoneNameById(zoneId)
 	elseif type(zoneIdOrName) == "string" then str3 = zoneIdOrName end
 
-	return zo_strformat(groupTooltipFmt, str1, str2, str3)
+	return zStrFmt(groupTooltipFmt, str1, str2, str3)
 end
 
 TQG.GroupQuestIdToTooltip = {
@@ -104,4 +102,6 @@ TQG.GroupQuestIdToTooltip = {
 	[6597] = SetupGroupTooltip(GetString(TQG_ARENA), "Angair", GetString(TQG_SEEK)),
 
 	[6655] = SetupGroupTooltip(GetString(TQG_TRIAL), "Malosza", GetString(TQG_SEEK)),
+
+	[6784] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Freibauer Geline"),
 }

@@ -1,10 +1,7 @@
---/script d(GetCVar("language.2"))
---/script SetCVar("language.2", "de")
--- en, de, fr, ru, jp, ... 
-
 TQG = {}
 
 local strfmt = string.format
+local zStrFmt = zo_strformat
 local overviewGroupTabDescFmt = "%s %s|t26:26:%s|t %s|t26:26:%s|t %s|t26:26:%s|t / |t26:26:%s|t\n\n%s\n\n%s"
 local overviewGroupTabDungIcon = "/esoui/art/icons/poi/poi_groupinstance_complete.dds"
 local overviewGroupTabTrialIcon = "/esoui/art/icons/poi/poi_raiddungeon_complete.dds"
@@ -18,7 +15,7 @@ local stringsEN = {
 	--TQG_CONFIRM_MAIN_TEXT = "You approach the end of the Zone Story, but Points of Interest remain incomplete. If you complete them before you finish the Zone Story, you may see familiar faces again at the end of the zone."
 
 	SI_BINDING_NAME_TQG_INTERACT_KEY = "Toggle Quest Guide",
-	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>> – <<2>>", "Toggle Quest Guide", GetString(SI_GAMEPAD_SECTION_HEADER)),
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zStrFmt("<<1>> – <<2>>", "Toggle Quest Guide", GetString(SI_GAMEPAD_SECTION_HEADER)),
 	TQG_MENU_JOURNAL = "The Questing Guide",
 
 	TQG_OVERVIEW_TAB = GetString(SI_CUSTOMER_SERVICE_OVERVIEW), --"Overview"
@@ -34,7 +31,7 @@ local stringsEN = {
 	TQG_GROUP_TAB = GetString(SI_INSTANCETYPE2), --"Group"
 
 	TQG_QUEST_BTN = "Classic: Quest Map",
-	TQG_CRAGLORN_BTN = zo_strformat("<<1>>: <<2>>", GetString(SI_HOUSECATEGORYTYPE2), GetZoneNameById(888)),
+	TQG_CRAGLORN_BTN = zStrFmt("<<1>>: <<2>>", GetString(SI_HOUSECATEGORYTYPE2), GetZoneNameById(888)),
 	TQG_IC_BTN = "DLC: The Sublime Plot",
 	TQG_ORSINIUM_BTN = "DLC: Reforging Orsinium",
 
@@ -65,13 +62,13 @@ local stringsEN = {
 	TQG_CRAGLORN = GetZoneNameById(888), --"Craglorn"
 	TQG_GUILDS_AND_GLORY = "Guilds and Glory",
 	TQG_DAEDRIC_WAR = "Daedric War",
-	TQG_MURKMIRE = "Murkmire: Interlude",
+	TQG_MURKMIRE = zStrFmt("<<1>>: <<2>>", GetZoneNameById(726), "Interlude"),
 	TQG_CHAPTER_ELSWEYR = "Season of the Dragon",
 	TQG_CHAPTER_SKYRIM = "Dark Heart of Skyrim",
 	TQG_CHAPTER_BLACKWOOD = "Gates of Oblivion",
 	TQG_CHAPTER_HIGH_ISLE = "Legacy of the Bretons",
 
-	TQG_DUNGEON_DLC_OLD = zo_strformat("<<1>> <<2>> <<3>>", GetString(SI_PLAYER_MENU_MISC), GetString(SI_INSTANCEDISPLAYTYPE2), GetString(SI_COLLECTIBLECATEGORYTYPE1)),
+	TQG_DUNGEON_DLC_OLD = zStrFmt("<<1>> <<2>> <<3>>", GetString(SI_PLAYER_MENU_MISC), GetString(SI_INSTANCEDISPLAYTYPE2), GetString(SI_COLLECTIBLECATEGORYTYPE1)),
 
 	TQG_INVITATION = "An Invitation",
 	TQG_FIGHTERS_NAME = "Fighters Guild",
@@ -84,14 +81,14 @@ local stringsEN = {
 }
 
 for id, stringVar in pairs(stringsEN) do
-	stringVar = zo_strformat("<<1>>", stringVar)
+	stringVar = zStrFmt("<<1>>", stringVar)
 	ZO_CreateStringId(id, stringVar)
 	SafeAddVersion(id, 1)
 end
 
 local DLCTooltipFmt = "<<1>>, <<2>>: <<3>>\n(<<4>> <<5>>)"
 local function SetupDLCTooltip(str1, str2, zoneId, str4, str5)
-	return zo_strformat(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
+	return zStrFmt(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
 end
 
 TQG.DLCQuestIdToTooltip = {
@@ -113,7 +110,7 @@ local function SetupGroupTooltip(str1, str2, zoneIdOrName)
 	if type(zoneIdOrName) == "number" then str3 = GetZoneNameById(zoneId)
 	elseif type(zoneIdOrName) == "string" then str3 = zoneIdOrName end
 
-	return zo_strformat(groupTooltipFmt, str1, str2, str3)
+	return zStrFmt(groupTooltipFmt, str1, str2, str3)
 end
 
 TQG.GroupQuestIdToTooltip = {
@@ -129,4 +126,6 @@ TQG.GroupQuestIdToTooltip = {
 	[6597] = SetupGroupTooltip(GetString(TQG_ARENA), GetString(TQG_SEEK), "Angair"),
 
 	[6655] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Malosza"),
+
+	[6784] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Yeoman Geline"),
 }

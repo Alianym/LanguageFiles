@@ -1,7 +1,5 @@
--- « »
--- ... / The Planemeld Arc...
-
 local strfmt = string.format
+local zStrFmt = zo_strformat
 local overviewGroupTabDescFmt = "%s %s|t26:26:%s|t %s|t26:26:%s|t %s|t26:26:%s|t / |t26:26:%s|t\n\n%s\n\n%s"
 local overviewGroupTabDungIcon = "/esoui/art/icons/poi/poi_groupinstance_complete.dds"
 local overviewGroupTabTrialIcon = "/esoui/art/icons/poi/poi_raiddungeon_complete.dds"
@@ -13,7 +11,7 @@ local stringsFR = {
 	--TQG_CONFIRM_QUEST_POI = "Points d'intérêt",
 
 	SI_BINDING_NAME_TQG_INTERACT_KEY = "Bascule Guide de Quêtes",
-	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>> – <<2>>", "Bascule Guide de Quêtes", GetString(SI_GAMEPAD_SECTION_HEADER)),
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zStrFmt("<<1>> – <<2>>", "Bascule Guide de Quêtes", GetString(SI_GAMEPAD_SECTION_HEADER)),
 	TQG_MENU_JOURNAL = "Le Guide de Quêtes",
 
 	TQG_OVERVIEW_TAB = "Général",
@@ -45,7 +43,7 @@ local stringsFR = {
 
 	TQG_GUILDS_AND_GLORY = "Guildes et gloire",
 	TQG_DAEDRIC_WAR = "Guerre Daedrique",
-	TQG_MURKMIRE = "Tourbevase: Intermède",
+	TQG_MURKMIRE = zStrFmt("<<1>>: <<2>>", GetZoneNameById(726), "Intermède"),
 	TQG_CHAPTER_ELSWEYR = "Saison du Dragon",
 	TQG_CHAPTER_SKYRIM = "Le Cœur noir de Bordeciel",
 	TQG_CHAPTER_BLACKWOOD = "Les Portes d'Oblivion",
@@ -67,7 +65,7 @@ end
 
 local DLCTooltipFmt = "<<1>>, <<2>>: <<3>>\n(<<4>> <<5>>)"
 local function SetupDLCTooltip(str1, str2, zoneId, str4, str5)
-	return zo_strformat(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
+	return zStrFmt(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
 end
 
 TQG.DLCQuestIdToTooltip = {
@@ -89,7 +87,7 @@ local function SetupGroupTooltip(str1, str2, zoneIdOrName)
 	if type(zoneIdOrName) == "number" then str3 = GetZoneNameById(zoneId)
 	elseif type(zoneIdOrName) == "string" then str3 = zoneIdOrName end
 
-	return zo_strformat(groupTooltipFmt, str1, str2, str3)
+	return zStrFmt(groupTooltipFmt, str1, str2, str3)
 end
 
 TQG.GroupQuestIdToTooltip = {
@@ -105,4 +103,6 @@ TQG.GroupQuestIdToTooltip = {
 	[6597] = SetupGroupTooltip(GetString(TQG_ARENA), GetString(TQG_SEEK), "Angair"),
 
 	[6655] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "Malosza"),
+
+	[6784] = SetupGroupTooltip(GetString(TQG_TRIAL), GetString(TQG_SEEK), "L’yéoman Géline"),
 }

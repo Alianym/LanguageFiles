@@ -1,4 +1,5 @@
 local strfmt = string.format
+local zStrFmt = zo_strformat
 local overviewGroupTabDescFmt = "%s %s|t26:26:%s|t %s|t26:26:%s|t %s|t26:26:%s|t / |t26:26:%s|t\n\n%s\n\n%s"
 local overviewGroupTabDungIcon = "/esoui/art/icons/poi/poi_groupinstance_complete.dds"
 local overviewGroupTabTrialIcon = "/esoui/art/icons/poi/poi_raiddungeon_complete.dds"
@@ -10,7 +11,7 @@ local stringsJP = {
 	--TQG_CONFIRM_QUEST_POI = "サイドクエスト",
 
 	SI_BINDING_NAME_TQG_INTERACT_KEY = "クエストガイドの表示",
-	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zo_strformat("<<1>>(<<2>>)", "クエストガイドの表示", GetString(SI_GAMEPAD_SECTION_HEADER)),
+	SI_BINDING_NAME_TQG_INTERACT_GAMEPAD_KEY = zStrFmt("<<1>>(<<2>>)", "クエストガイドの表示", GetString(SI_GAMEPAD_SECTION_HEADER)),
 	TQG_MENU_JOURNAL = "クエストガイド",
 
 	TQG_OVERVIEW_CLASSIC_DESC = "次元融合編... タムリエル大陸を含むアービスにおける『ESO』オリジナルの物語です。メインストーリーに加えて、所属する同盟やギルドのストーリーを織り交ぜながら物語が進行していきます。同盟ストーリーは、初期エリアの島、次にオーリドン／グレナンブラ／ストンフォール、・・・といった具合に勢力ごとに並列していますが、コールドハーバーに到達する前に各勢力の同盟ストーリーを全て完了させる必要はありません。\n\n当初の同盟ストーリーの道筋は次のとおりです。\n・自分のキャラクターが所属する同盟の物語\n・メインストーリーのクリア後に、キャドウェルのシルバー／ゴールドとして開始される他の２つの同盟ストーリーの追体験",
@@ -23,7 +24,7 @@ local stringsJP = {
 	TQG_CLASSIC_TAB = "ベースゲーム", -- 'The Base Game' is more familiar to Japanese players than translated word of 'Classic'.
 
 	TQG_QUEST_BTN = "クエスト案内図",
-	TQG_CRAGLORN_BTN = zo_strformat("<<1>>", GetZoneNameById(888)),
+	TQG_CRAGLORN_BTN = zStrFmt("<<1>>", GetZoneNameById(888)),
 
 	TQG_IC_BTN = "DLC:インペリアルシティ",
 	TQG_ORSINIUM_BTN = "DLC:オルシニウム",
@@ -45,7 +46,7 @@ local stringsJP = {
 
 	TQG_GUILDS_AND_GLORY = "ギルドと栄光",
 	TQG_DAEDRIC_WAR = "デイドラ戦争",
-	TQG_MURKMIRE = "マークマイア: 幕間",
+	TQG_MURKMIRE = zStrFmt("<<1>>: <<2>>", GetZoneNameById(726), "幕間"),
 	TQG_CHAPTER_ELSWEYR = "ドラゴンのシーズン",
 	TQG_CHAPTER_SKYRIM = "スカイリムの闇の中心",
 	TQG_CHAPTER_BLACKWOOD = "オブリビオンの門",
@@ -68,7 +69,7 @@ end
 
 local DLCTooltipFmt = "<<1>>, <<2>>: <<3>>\n(<<5>> <<4>>)"
 local function SetupDLCTooltip(str1, str2, zoneId, str4, str5)
-	return zo_strformat(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
+	return zStrFmt(DLCTooltipFmt, str1, str2, GetZoneNameById(zoneId), str4, str5)
 end
 
 TQG.DLCQuestIdToTooltip = {
@@ -90,7 +91,7 @@ local function SetupGroupTooltip(str1, str2, zoneIdOrName)
 	if type(zoneIdOrName) == "number" then str3 = GetZoneNameById(zoneId)
 	elseif type(zoneIdOrName) == "string" then str3 = zoneIdOrName end
 
-	return zo_strformat(groupTooltipFmt, str1, str2, str3)
+	return zStrFmt(groupTooltipFmt, str1, str2, str3)
 end
 
 TQG.GroupQuestIdToTooltip = {

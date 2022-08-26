@@ -28,6 +28,8 @@ local stringsEN = {
 	LIBRARIUM_OVERIVEW = GetString(SI_CUSTOMER_SERVICE_OVERVIEW),
 	LIBRARIUM_OPTIONS = GetString(SI_GAMEPAD_OPTIONS_MENU),
 
+	LIBRARIUM_MISC = GetString(SI_PLAYER_MENU_MISC),
+
 	----
 	--General Strings
 	----
@@ -100,6 +102,8 @@ local stringsEN = {
 	LIBRARIUM_SETTINGS_SENDING_BOOKS_NAME = "Sending Books",
 	LIBRARIUM_SETTINGS_AUTHOR_TOOLTIP = "How would you like to be attributed? Example: @Name (You can put 'anonymous')",
 	LIBRARIUM_SETTINGS_LOCATIONS_TOOLTIP = "In what zones would you like your books to appear? Example: ",
+	LIBRARIUM_SETTINGS_DISCORD_NAME = "Join My Discord!",
+	LIBRARIUM_SETTINGS_DISCORD_TOOLTIP = "Join my Discord to chat about my released and in-progress AddOns, to help with translations, or to submit books outside the game!",
 
 	----
 	--Mail Date Strings
@@ -126,11 +130,6 @@ local stringsEN = {
 	LIBRARIUM_MONTH_TWELVE = "Evening Star",
 
 	LIBRARIUM_DATE_SECOND_ERA = "2E",
-
-	----
-	--Monster Diaries Strings
-	----
-	LIBRARIUM_LORE_LIBRARY_ANNOUNCE_MONSTER_DIARY_LEARNED = "Librarium Monster Diary Learned"
 }
 
 for id, stringVar in pairs(stringsEN) do
