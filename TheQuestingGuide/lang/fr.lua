@@ -15,9 +15,9 @@ local stringsFR = {
 	TQG_MENU_JOURNAL = "Le Guide de Quêtes",
 
 	TQG_OVERVIEW_TAB = "Général",
-	TQG_OVERVIEW_CLASSIC_DESC = "L'arc de la Coalescence est l'histoire original dans l'Aurbis, le récit s'entremêlera entre l'histoire principale, les alliances et les intrigues des guildes au fûr et à mesure que vous progresserez.\n\nL'histoire des Alliances se passe en parallèle – e.g les îles de départ, puis Auridia/La Glénumbrie/Les Éboulis etc. Il n'est cependant pas nécessaire de finir toutes les quêtes d'Alliances pour accéder à Havreglace.\n\nLe cheminement original de l'histoire des Alliances est celui-ci:\n - L'histoire de l'alliance de votre personnage, puis l'Argent et l'Or de Cadwell qui représente les deux autres alliances, ce qui peut être réalisé en tant que post-quête principale pour faire l'expérience des histoires de ces alliances.",
-	TQG_OVERVIEW_DLC_DESC = "La section des DLC couvre la majorité de l'intrigue depuis l'introduction des donjons de DLC, zones et chapitres. L'ordre ci-dessous fonctionne chronologiquement à la sortie des extensions.\n\nLes évènements majeurs sont;\n – La cité impériale\n – Orsinium\n – Guilde des voleurs / Confrérie noir\n – Guerre Daedrique\n – Tourbevase\n – Saison du Dragon\n – Le Cœur noir de Bordeciel\n – Les Portes d'Oblivion",
-	TQG_OVERVIEW_GROUP_DESC = strfmt(overviewGroupTabDescFmt, "La section des contenus de groupe inclut la majorité des instances de groupe disponible à ce jour.", "Donjons : ", overviewGroupTabDungIcon, "Raids : ", overviewGroupTabTrialIcon, "Arènes : ", overviewGroupTabArenaIconOne, overviewGroupTabArenaIconTwo, "Il y a les versions des contenus en mode normal, vétéran et occasionnellement en mode 'difficile', avec l'exception de l'Arène de Maelstrom qui requiert uniquement le mode normal. Le Guide ne se soucie pas du mode de difficulté que vous choisirez pour compléter la quête.", "Les quêtes sont cependant liées à certaines extensions. E.G La Gueule de Lorkhaj est en Marche de la Camarde, mais est sortie avec le DLC Thieves Guild, elle sera donc listée sous celui-ci."),
+	TQG_OVERVIEW_CLASSIC_DESC = "L'arc de la Coalescence est l'histoire original dans l'Aurbis, le récit s'entremêlera entre l'histoire principale, les alliances et les intrigues des guildes au fûr et à mesure que vous progresserez.\n\nL'histoire des Alliances se passe en parallèle – les îles de départ, puis Auridia/La Glénumbrie/Les Éboulis etc. Il n'est cependant pas nécessaire de finir toutes les quêtes d'Alliances pour accéder à Havreglace.\n\nLe cheminement original de l'histoire des Alliances est celui-ci:\n - L'histoire de l'alliance de votre personnage, puis l'Argent et l'Or de Cadwell qui représente les deux autres alliances, ce qui peut être réalisé en tant que post-quête principale pour faire l'expérience des histoires de ces alliances.",
+	TQG_OVERVIEW_DLC_DESC = "La section des DLC couvre la majorité de l'intrigue depuis l'introduction des donjons de DLC, zones et chapitres. L'ordre ci-dessous fonctionne chronologiquement à la sortie des extensions.\n\nLes évènements majeurs sont:\n – La cité impériale\n – Orsinium\n – Guilde des voleurs / Confrérie noire\n – Guerre Daedrique\n – Tourbevase\n – Saison du Dragon\n – Le Cœur noir de Bordeciel\n – Les Portes d'Oblivion",
+	TQG_OVERVIEW_GROUP_DESC = strfmt(overviewGroupTabDescFmt, "La section des contenus de groupe inclut la majorité des instances de groupe disponible à ce jour.", "Donjons : ", overviewGroupTabDungIcon, "Raids : ", overviewGroupTabTrialIcon, "Arènes : ", overviewGroupTabArenaIconOne, overviewGroupTabArenaIconTwo, "Il y a les versions des contenus en mode normal, vétéran et occasionnellement en mode 'difficile', avec l'exception de l'Arène de Maelstrom qui requiert uniquement le mode normal. Le Guide ne se soucie pas du mode de difficulté que vous choisirez pour compléter la quête.", "Les quêtes sont cependant liées à certaines extensions. La Gueule de Lorkhaj est en Marche de la Camarde, mais est sortie avec le DLC Thieves Guild, elle sera donc listée sous celui-ci."),
 
 	TQG_OVERVIEW_DLC_TITLE = "DLC + Chapitres",
 	TQG_OVERVIEW_GROUP_TITLE = "Contenu du groupe",
@@ -51,12 +51,12 @@ local stringsFR = {
 
 	TQG_INVITATION = "Une Invitation",
 	TQG_FIGHTERS_NAME = "Guilde des guerriers",
-	TQG_FIGHTERS_DESC = "La Guilde des guerriers a été créée en vertu de l'article 4 de la « loi sur les guildes » et cette charte a été confirmée pour la première fois au cours de la 321e année de la deuxième ère dans le cadre du règne du potentat Versidue Shaie.",
+	TQG_FIGHTERS_DESC = "La Guilde des guerriers a été créée en vertu de l'article 4 de la « loi sur les guildes » et cette charte a été confirmée pour la première fois au cours de la 321e année de la Deuxième Ère dans le cadre du règne du potentat Versidue Shaie.",
 	TQG_MAGES_NAME = "Guilde des mages",
-	TQG_MAGES_DESC = "La Guilde des Mages a été fondée en 230 à la deuxième ère par Vanus Galerion et Rilis XII. Fondé sur Summerset Isle. Elle a ensuite été confirmée par la « loi de guilde » de Potentat Versidue-Shaie.",
+	TQG_MAGES_DESC = "La Guilde des mages a été créée sur l'archipel du Couchant en 230 de la Deuxième Ère par Vanus Galérion et Rilis XII. Elle a ensuite été confirmée par la « loi de guilde » du Potentat Versidue-Shaie.",
 	TQG_DOSHIA_LAIR = "La tanière de Doshia",
 	TQG_BONUS_BALMORA = "Bonus: Balmora",
-	TQG_BONUS_BALMORA_DESC = "Le gouvernement de Morrowind a autorisé le Morag Tong il y a bien longtemps, lors de la Première Ère, et à ce jour, elle continue de mener des assassinats tacitement légaux, avec un système de contrats appelés « Ordres honorables d'execution ».",
+	TQG_BONUS_BALMORA_DESC = "Le gouvernement de Morrowind a autorisé la Morag Tong il y a bien longtemps, lors de la Première Ère, et à ce jour, elle continue de mener des assassinats tacitement légaux, avec un système de contrats appelés « Ordres honorables d'exécution ».",
 }
 
 for id, stringVar in pairs(stringsFR) do
@@ -69,9 +69,9 @@ local function SetupDLCTooltip(str1, str2, zoneId, str4, str5)
 end
 
 TQG.DLCQuestIdToTooltip = {
-	[5935] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 849, GetString(TQG_SEEK), "'Rhea Opacarius'"),
+	[5935] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 849, GetString(TQG_SEEK), "'Rhéa Opacarius'"),
 	[6023] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 980, GetString(TQG_SEEK), "'La Dépêche de l'Ordre de l'œil'"),
-	[6097] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 1011, GetString(TQG_SEEK), "'Vanus Galerion'"),
+	[6097] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/1", 1011, GetString(TQG_SEEK), "'Vanus Galérion'"),
 	[6226] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 726, GetString(TQG_SEEK), "'Les Conservateurs Cyrodiiliaques ont besoin de vous !'"),
 	[6242] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "2/2", 726, GetString(TQG_SEEK), "'Concordia Mercius'"),
 	[6299] = SetupDLCTooltip(GetString(TQG_PROLOGUE), "1/2", 1086, GetString(TQG_SEEK), "'Anais Davaux'"),
