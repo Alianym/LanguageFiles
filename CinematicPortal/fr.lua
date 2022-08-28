@@ -3,7 +3,7 @@ CinematicPortal = CinematicPortal or {}
 
 local stringsFR = {
 	-- For LAM Menu
-	--CINE_PORTAL_HEADER = "Replay Cinematics",
+	CINE_PORTAL_HEADER = "Revoir les cinématiques",
 
 	-- Portal Names
 	CINE_PORTAL_NAME_PLANEMELD = "La Coalescence",
